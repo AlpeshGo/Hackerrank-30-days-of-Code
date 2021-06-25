@@ -1,0 +1,31 @@
+#Task:
+Given an array, A, of N integers, print A's elements in reverse order as a single line of space-separated numbers.
+
+#Example:
+Example
+A = [1,2,3,4]
+Print 4 3 2 1. Each integer is separated by one space.
+
+#Input:
+4
+1 4 3 2
+
+#Solution:
+import math
+import os
+import random
+import re
+import sys
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+    arr.reverse()
+    for i in range(len(arr)):
+        print(arr[i], end = " ")
+
+#Output:
+2 3 4 1
+        
+        
