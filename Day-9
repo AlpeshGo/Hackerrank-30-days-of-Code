@@ -1,0 +1,35 @@
+#Task:
+Recursive Method for Calculating Factorial
+4! = 4 × 3 × 2 × 1 = 24
+7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040
+1! = 1
+
+#Input:
+3
+
+#Solution:
+import math
+import os
+import random
+import re
+import sys
+
+def factorial(n):
+    # Write your code here
+    if n <= 1:
+        return 1 
+    else:
+        return n*factorial(n-1)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    result = factorial(n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+    
+#Output:
+6
