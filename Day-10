@@ -35,3 +35,4 @@ print(max(MAXIMUM, CURRENT))
 #Output:
 1
 2
+
