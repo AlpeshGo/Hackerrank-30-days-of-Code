@@ -49,18 +49,18 @@ class Student(Person):
             sum += score
         average = sum/len(scores)
         if average < 40:
-            return 'T'
-        elif average < 55:
-            return 'D'
-        elif average < 70:
-            return 'P'
-        elif average < 80:
-            return 'A'
-        elif average < 90:
-            return 'E'
-        else:
-            return 'O'      
-           
+        return('T')
+    elif average >= 40 and average < 55:
+        return('D')
+    elif average >= 55 and average < 70:
+        return('P')
+    elif average >= 70 and average < 80:
+        return('A')
+    elif average >= 80 and average < 90:
+        return('E')
+        elif average >= 90 and average < 100:
+            return('O')
+	    
 line = input().split()
 firstName = line[0]
 lastName = line[1]
