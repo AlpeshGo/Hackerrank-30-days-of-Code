@@ -1,0 +1,35 @@
+#Task:
+A prime is a natural number greater than  that has no positive divisors other than  and itself. Given a number, n, determine and print whether it is Prime or Not Prime.
+
+Note: If possible, try to come up with a 0sqrt(n) primality algorithm, or see what sort of optimizations you come up with for an 0(n) algorithm. Be sure to check out the Editorial after submitting your code.
+
+#Input:
+12
+5
+7
+
+#Output:
+Not prime
+Prime
+Prime
+
+#Solution:
+import math
+def isPrime(n):
+    if n<= 1:
+        return False
+    sqrt_n = math.sqrt(n)
+    if sqrt_n.is_integer():
+        return False
+    for i in range(2, int(sqrt_n) + 1):
+        if n % i == 0:
+            return False
+    return True    
+        
+num_test_cases = int(input())
+for i in range(num_test_cases):
+    n = int(input())
+    if isPrime(n):
+        print('Prime')
+    else:
+        print('Not prime')
