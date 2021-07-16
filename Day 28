@@ -1,0 +1,41 @@
+#Task:
+Consider a database table, Emails, which has the attributes First Name and Email ID. Given N rows of data simulating the Emails table, print an alphabetically-ordered list of people whose email address ends in @gmail.com.
+
+#Input:
+riya riya@gmail.com
+julia julia@julia.me
+julia sjulia@gmail.com
+julia julia@gmail.com
+samantha samantha@gmail.com
+tanya tanya@gmail.com
+
+#Output:
+julia
+julia
+riya
+samantha
+tanya
+
+#Solution:
+import math
+import os
+import random
+import re
+import sys
+
+if __name__ == '__main__':
+    N = int(input().strip())
+    res = []
+    for N_itr in range(N):
+        first_multiple_input = input().rstrip().split()
+
+        firstName = first_multiple_input[0]
+
+        emailID = first_multiple_input[1]
+        
+        if '@gmail.com' in emailID[-10:]:
+            res.append(firstName)
+        
+    res.sort()
+    for name in res:
+        print(name)        
